@@ -6,6 +6,12 @@ function createSheet() {
     const artDiv = document.createElement("div");
     artDiv.classList.toggle("divArt");
     artDiv.innerHTML = i;
+    artDiv.addEventListener("mouseover", () => {
+      artDiv.style.background = "blue";
+    });
+    artDiv.addEventListener("mouseout", () => {
+      artDiv.style.background = "white";
+    });
     mainContainer.appendChild(artDiv);
   }
 }

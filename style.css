@@ -1,0 +1,15 @@
+#mainContainer {
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px 200px;
+}
+
+.divArt {
+  border: 1px solid black;
+  flex-basis: calc(6.25% - 2px);
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

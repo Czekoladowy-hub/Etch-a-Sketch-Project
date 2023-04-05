@@ -12,7 +12,7 @@ function createSheet() {
   for (let i = 1; i <= squaresPerSite * squaresPerSite; i++) {
     const artDiv = document.createElement("div");
     artDiv.classList.toggle("divArt");
-    artDiv.style.width = squareWidth + "px";
+    artDiv.style.width = squareWidth - 2 + "px";
     artDiv.innerHTML = i;
     // Add listeners to control if cursore is hovering div and change color
     artDiv.addEventListener("mouseover", () => {

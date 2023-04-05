@@ -9,7 +9,7 @@
 .divArt {
   margin: 0px;
   padding: 0px;
-  border: 0px solid black;
+  border: 1px solid black;
   aspect-ratio: 1;
   display: flex;
   justify-content: center;

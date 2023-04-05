@@ -3,11 +3,13 @@
   display: flex;
   flex-wrap: wrap;
   margin: 50px 200px;
+  width: 960px;
 }
 
 .divArt {
-  border: 1px solid black;
-  flex-basis: calc(6.25% - 2px);
+  margin: 0px;
+  padding: 0px;
+  border: 0px solid black;
   aspect-ratio: 1;
   display: flex;
   justify-content: center;

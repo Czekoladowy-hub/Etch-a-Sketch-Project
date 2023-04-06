@@ -12,11 +12,14 @@ for (let i = 1; i <= 256; i++) {
   artDiv.style.width = squareWidth + "px";
 
   artDiv.addEventListener("mouseover", () => {
-    artDiv.style.background = "blue";
+    let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    artDiv.style.background = "#" + randomColor;
+    artDiv.style.brightness = 0.5;
   });
-  artDiv.addEventListener("mouseout", () => {
-    artDiv.style.background = "white";
-  });
+  // artDiv.addEventListener("mouseout", () => {
+  //   let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+  //   console.log(randomColor);
+  // });
   mainContainer.appendChild(artDiv);
 }
 
@@ -36,11 +39,13 @@ function createCustomSheet(userInput) {
     artDiv.classList.toggle("divArt");
     artDiv.style.width = squareWidth + "px";
     artDiv.addEventListener("mouseover", () => {
-      artDiv.style.background = "blue";
+      let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+      artDiv.style.background = "#" + randomColor;
     });
-    artDiv.addEventListener("mouseout", () => {
-      artDiv.style.background = "white";
-    });
+    // artDiv.addEventListener("mouseout", () => {
+    //   let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    //   console.log(randomColor);
+    // });
     mainContainer.appendChild(artDiv);
   }
 }

@@ -55,4 +55,5 @@ function createCustomSheet(userInput) {
 
 function resetSheet() {
   newArray.forEach((object) => (object.style.background = "white"));
+  console.log("Does it work?");
 }

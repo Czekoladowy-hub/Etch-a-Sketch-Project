@@ -49,6 +49,7 @@ function createCustomSheet(userInput) {
     //   console.log(randomColor);
     // });
     mainContainer.appendChild(artDiv);
+    newArray.push(artDiv);
   }
 }
 

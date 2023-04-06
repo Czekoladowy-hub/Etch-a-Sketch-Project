@@ -8,8 +8,15 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <button onclick="removeSheet()">click me</button>
-    <div id="mainContainer"></div>
+    <div id="mainContainer">
+      <div id="buttonContainer">
+        <button id="setSqueresBtn" onclick="removeSheet()">
+          Set squere number
+        </button>
+        <button id="setSqueresBtn" onclick="resetSheet()">Reset sheet</button>
+      </div>
+      <div id="squereContainer"></div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,8 +1,29 @@
+body {
+  text-align: center;
+  background-color: aliceblue;
+}
 #mainContainer {
-  border: 1px solid black;
+  display: inline-flex;
+  flex-direction: row;
+
+  padding: 50px;
+  margin: auto;
+  gap: 50px;
+}
+
+#buttonContainer {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+#squereContainer {
+  border: 3px solid black;
+  border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
-  margin: 50px 200px;
+
   width: 960px;
   aspect-ratio: 1;
 }
@@ -16,7 +37,16 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  border-radius: 5px;
 }
 .divArtHover {
   background-color: red;
+}
+
+#setSqueresBtn,
+button {
+  padding: 30px 20px;
+  font-size: 25px;
+  border: px solid black;
+  border-radius: 5px;
 }

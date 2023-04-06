@@ -1,9 +1,10 @@
-const mainContainer = document.querySelector("#mainContainer");
+const mainContainer = document.querySelector("#squereContainer");
 let squaresPerSite = 16;
 let squareWidth = mainContainer.clientWidth / squaresPerSite;
 const minInput = 2;
 const maxInput = 100;
 let userInput = "";
+let newArray = [];
 
 // create basic sheet
 for (let i = 1; i <= 256; i++) {
@@ -21,6 +22,7 @@ for (let i = 1; i <= 256; i++) {
   //   console.log(randomColor);
   // });
   mainContainer.appendChild(artDiv);
+  newArray.push(artDiv);
 }
 
 function removeSheet() {
@@ -48,4 +50,8 @@ function createCustomSheet(userInput) {
     // });
     mainContainer.appendChild(artDiv);
   }
+}
+
+function resetSheet() {
+  newArray.forEach((object) => (object.style.background = "white"));
 }

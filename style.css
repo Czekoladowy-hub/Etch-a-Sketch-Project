@@ -1,6 +1,8 @@
 body {
   text-align: center;
   background-color: aliceblue;
+  margin: 0;
+  padding: 0;
 }
 #mainContainer {
   display: inline-flex;
@@ -11,10 +13,11 @@ body {
 }
 
 #buttonContainer {
-  align-self: center;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 50px;
+  width: 300px;
 }
 
 #squereContainer {
@@ -22,7 +25,6 @@ body {
   border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
-
   width: 960px;
   aspect-ratio: 1;
 }
@@ -42,10 +44,39 @@ body {
   background-color: red;
 }
 
-#setSqueresBtn,
-button {
-  padding: 30px 20px;
-  font-size: 25px;
-  border: px solid black;
-  border-radius: 5px;
+#setSqueresBtn {
+  flex: 1;
+}
+
+#reset {
+  flex: 1;
+}
+
+#randomColorBtn {
+  flex: 1;
+}
+
+#colorPalette {
+  flex: 10;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+#colorPalette > #colorPaletteLogo {
+  font-size: 30px;
+  padding: 15px 0;
+}
+
+#colors {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.colorBtn {
+  border: 1px solid black;
+  box-sizing: border-box;
+  width: 25%;
+  aspect-ratio: 1;
 }

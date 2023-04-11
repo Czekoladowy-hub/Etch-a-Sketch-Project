@@ -5,7 +5,6 @@ body {
 #mainContainer {
   display: inline-flex;
   flex-direction: row;
-
   padding: 50px;
   margin: auto;
   gap: 50px;

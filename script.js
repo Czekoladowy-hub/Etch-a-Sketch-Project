@@ -1,4 +1,5 @@
 const mainContainer = document.querySelector("#squereContainer");
+const randomColorBtn = document.querySelector("#randomColorBtn");
 let squaresPerSite = 16;
 let squareWidth = mainContainer.clientWidth / squaresPerSite;
 const minInput = 2;
@@ -12,15 +13,6 @@ for (let i = 1; i <= 256; i++) {
   artDiv.classList.toggle("divArt");
   artDiv.style.width = squareWidth + "px";
 
-  artDiv.addEventListener("mouseover", () => {
-    let randomColor = Math.floor(Math.random() * 16777215).toString(16);
-    artDiv.style.background = "#" + randomColor;
-    artDiv.style.brightness = 0.5;
-  });
-  // artDiv.addEventListener("mouseout", () => {
-  //   let randomColor = Math.floor(Math.random() * 16777215).toString(16);
-  //   console.log(randomColor);
-  // });
   mainContainer.appendChild(artDiv);
   newArray.push(artDiv);
 }
@@ -40,20 +32,22 @@ function createCustomSheet(userInput) {
     const artDiv = document.createElement("div");
     artDiv.classList.toggle("divArt");
     artDiv.style.width = squareWidth + "px";
-    artDiv.addEventListener("mouseover", () => {
-      let randomColor = Math.floor(Math.random() * 16777215).toString(16);
-      artDiv.style.background = "#" + randomColor;
-    });
-    // artDiv.addEventListener("mouseout", () => {
-    //   let randomColor = Math.floor(Math.random() * 16777215).toString(16);
-    //   console.log(randomColor);
-    // });
+
     mainContainer.appendChild(artDiv);
     newArray.push(artDiv);
   }
 }
 
+function randomColor() {
+  newArray.forEach((div) => {
+    div.addEventListener("mouseover", () => {
+      let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+      div.style.background = "#" + randomColor;
+      console.log("random");
+    });
+  });
+}
+
 function resetSheet() {
   newArray.forEach((object) => (object.style.background = "white"));
-  console.log("Does it work?");
 }

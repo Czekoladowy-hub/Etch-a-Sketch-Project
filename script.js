@@ -1,11 +1,13 @@
 const mainContainer = document.querySelector("#squereContainer");
 const randomColorBtn = document.querySelector("#randomColorBtn");
+const colorPalette = document.querySelectorAll(".colorBtn");
 let squaresPerSite = 16;
 let squareWidth = mainContainer.clientWidth / squaresPerSite;
 const minInput = 2;
 const maxInput = 100;
 let userInput = "";
 let newArray = [];
+let colorPaletteArray = Array.from(colorPalette);
 
 // create basic sheet
 for (let i = 1; i <= 256; i++) {
@@ -16,6 +18,24 @@ for (let i = 1; i <= 256; i++) {
   mainContainer.appendChild(artDiv);
   newArray.push(artDiv);
 }
+
+//load color palette
+colorPaletteArray.forEach((color) => {
+  hexColor = color.dataset.color;
+  color.style.background = hexColor;
+  color.innerHTML = "";
+});
+
+//add event listener to colors on palette
+colorPaletteArray.forEach((color) => {
+  color.addEventListener("click", (e) => {
+    newArray.forEach((div) => {
+      div.addEventListener("mouseover", () => {
+        div.style.background = e.target.dataset.color;
+      });
+    });
+  });
+});
 
 function removeSheet() {
   mainContainer.innerHTML = "";
@@ -32,7 +52,6 @@ function createCustomSheet(userInput) {
     const artDiv = document.createElement("div");
     artDiv.classList.toggle("divArt");
     artDiv.style.width = squareWidth + "px";
-
     mainContainer.appendChild(artDiv);
     newArray.push(artDiv);
   }
